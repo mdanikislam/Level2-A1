@@ -6,12 +6,12 @@
 
 TypeScript-এ `interface` এবং `type` দুটোই কোনো object-এর structure নির্ধারণে ব্যবহৃত হয়, কিন্তু তাদের মধ্যে কিছু পার্থক্য আছে।
 
-### 🔹 Interface
+###  Interface
 - মূলত object-এর shape নির্ধারণে ব্যবহৃত হয়।
 - এক নামের একাধিক interface declare করলে TypeScript সেগুলো **merge** করে (declaration merging)।
 - সহজে `extends` দিয়ে inherit করা যায়।
 
-### 🔹 Type
+###  Type
 - আরও flexible—primitive, union, tuple, function type সবকিছু represent করতে পারে।
 - declaration merging সমর্থন করে না।
 - extend করতে হলে intersection ব্যবহার করতে হয়।
@@ -51,17 +51,17 @@ type Keys = keyof User;
 
 ## **3. Explain the difference between any, unknown, and never types in TypeScript.**
 
-### 🔹 **any**
+###  **any**
 - যেকোনো কিছু assign করা যায়।
 - TypeScript type-checking বন্ধ হয়ে যায়।
 - ভুল হওয়ার ঝুঁকি বেশি।
 
-### 🔹 **unknown**
+###  **unknown**
 - যে কোনো value assign করা যায়।
 - কিন্তু ব্যবহার করার আগে type-check করতে হয়।
 - এটি safer version of `any`।
 
-### 🔹 **never**
+###  **never**
 - এমন value যা কখনই ঘটে না।
 - যেমন error throw করা function বা infinite loop।
 
@@ -81,7 +81,7 @@ function error(): never {
 
 Enum হল related constant value-এর একটি গ্রুপ। এটি কোডকে আরও readable এবং maintainable করে।
 
-### 🔹 Numeric Enum
+###  Numeric Enum
 ```ts
 enum Direction {
   North = 1,
@@ -91,7 +91,7 @@ enum Direction {
 }
 ```
 
-### 🔹 String Enum
+###  String Enum
 ```ts
 enum Status {
   Active = "ACTIVE",
@@ -104,7 +104,7 @@ enum Status {
 
 ## **5. Provide an example of using union and intersection types in TypeScript.**
 
-### 🔹 Union Type
+###  Union Type
 একটি ভেরিয়েবল একাধিক ধরনের মান রাখতে পারে।
 
 ```ts
@@ -113,7 +113,7 @@ value = "Hello";
 value = 20;
 ```
 
-### 🔹 Intersection Type
+###  Intersection Type
 দুটি type merge করে একটি নতুন type তৈরি করা হয়।
 
 ```ts
